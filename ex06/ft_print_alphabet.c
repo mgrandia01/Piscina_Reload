@@ -6,11 +6,13 @@
 /*   By: mgrandia <mgrandia@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 18:25:17 by mgrandia          #+#    #+#             */
-/*   Updated: 2024/12/19 18:27:34 by mgrandia         ###   ########.fr       */
+/*   Updated: 2024/12/19 20:12:52 by mgrandia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+void	ft_putchar(char c);
 /*
 void	ft_putchar(char c)
 {
