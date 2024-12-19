@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mgrandia <mgrandia@student.42barcelon      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/19 18:34:55 by mgrandia          #+#    #+#             */
+/*   Updated: 2024/12/19 18:35:48 by mgrandia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 
 void	ft_swap(int *a, int *b)
@@ -8,16 +20,14 @@ void	ft_swap(int *a, int *b)
 	*b = *a;
 	*a = c;
 }
-
+/*
 int	main(void)
 {
-	int a;
-	int b;
+	int	a;
+	int	b;
 
 	a = 3;
 	b = 10;
-
-	ft_swap(&a,&b);
-	printf("a = %d, b = %d",a,b);
-	return 0;
-}
+	ft_swap(&a, &b);
+	return (0);
+}*/
