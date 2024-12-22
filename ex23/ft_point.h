@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgrandia <mgrandia@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/20 17:18:16 by mgrandia          #+#    #+#             */
-/*   Updated: 2024/12/20 17:20:34 by mgrandia         ###   ########.fr       */
+/*   Created: 2024/12/22 15:56:22 by mgrandia          #+#    #+#             */
+/*   Updated: 2024/12/22 16:57:14 by mgrandia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#ifndef FT_POINT_H
+# define FT_POINT_H
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+typedef struct point
 {
-	*div = a / b;
-	*mod = a % b;
-}
-/*
-int	main(void)
-{
-	int	a;
-	int	b;
-	int	div;
-	int	mod;
+	int	x;
+	int	y;
+}	t_point;
 
-	a = 6;
-	b = 6;
-	div = 0;
-	mod = 0;
-	ft_div_mod(a, b, &div, &mod);
-	printf("%d", div);
-}*/
+void	set_point(t_point *point);
+#endif

@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgrandia <mgrandia@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/20 17:18:16 by mgrandia          #+#    #+#             */
-/*   Updated: 2024/12/20 17:20:34 by mgrandia         ###   ########.fr       */
+/*   Created: 2024/12/21 15:32:05 by mgrandia          #+#    #+#             */
+/*   Updated: 2024/12/21 17:50:43 by mgrandia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+int	ft_strcmp(char *s1, char *s2)
 {
-	*div = a / b;
-	*mod = a % b;
+	int	i;
+
+	i = 0;
+	while (s1[i] != '\0' || s2[i] != '\0')
+	{
+		if (s1[i] == s2[i])
+			i++;
+		else
+			return (s1[i] - s2[i]);
+	}
+	return (s1[i] - s2[i]);
 }
 /*
 int	main(void)
 {
-	int	a;
-	int	b;
-	int	div;
-	int	mod;
-
-	a = 6;
-	b = 6;
-	div = 0;
-	mod = 0;
-	ft_div_mod(a, b, &div, &mod);
-	printf("%d", div);
+	printf("%d", ft_strcmp("ABC", "ABZ"));
+	return (0);
 }*/

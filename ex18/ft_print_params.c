@@ -1,34 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgrandia <mgrandia@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/20 17:18:16 by mgrandia          #+#    #+#             */
-/*   Updated: 2024/12/20 17:20:34 by mgrandia         ###   ########.fr       */
+/*   Created: 2024/12/21 15:46:39 by mgrandia          #+#    #+#             */
+/*   Updated: 2024/12/21 17:33:36 by mgrandia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
-{
-	*div = a / b;
-	*mod = a % b;
-}
+void	ft_putchar(char c);
 /*
-int	main(void)
+void	ft_putchar(char c)
 {
-	int	a;
-	int	b;
-	int	div;
-	int	mod;
-
-	a = 6;
-	b = 6;
-	div = 0;
-	mod = 0;
-	ft_div_mod(a, b, &div, &mod);
-	printf("%d", div);
+	write(1, &c, 1);
 }*/
+
+void	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
+}
+
+int	main(int argc, char *argv[])
+{
+	int	i;
+
+	i = 1;
+	while (argc > i)
+	{
+		ft_putstr(argv[i]);
+		ft_putchar('\n');
+		i++;
+	}
+	return (0);
+}

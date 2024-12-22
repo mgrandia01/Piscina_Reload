@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgrandia <mgrandia@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/20 17:18:16 by mgrandia          #+#    #+#             */
-/*   Updated: 2024/12/20 17:20:34 by mgrandia         ###   ########.fr       */
+/*   Created: 2024/12/21 15:20:05 by mgrandia          #+#    #+#             */
+/*   Updated: 2024/12/21 15:26:52 by mgrandia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_putchar(char c);
+/*
+void	ft_putchar(char c)
 {
-	*div = a / b;
-	*mod = a % b;
+	write (1, &c, 1);
+}*/
+
+void	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
 }
 /*
 int	main(void)
 {
-	int	a;
-	int	b;
-	int	div;
-	int	mod;
-
-	a = 6;
-	b = 6;
-	div = 0;
-	mod = 0;
-	ft_div_mod(a, b, &div, &mod);
-	printf("%d", div);
+	ft_putstr("Funciona perf");
+	return (0);
 }*/

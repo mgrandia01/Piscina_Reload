@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgrandia <mgrandia@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/20 17:18:16 by mgrandia          #+#    #+#             */
-/*   Updated: 2024/12/20 17:20:34 by mgrandia         ###   ########.fr       */
+/*   Created: 2024/12/20 17:44:57 by mgrandia          #+#    #+#             */
+/*   Updated: 2024/12/21 16:03:13 by mgrandia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+int	ft_recursive_factorial(int nb)
 {
-	*div = a / b;
-	*mod = a % b;
+	if (nb < 0 || nb > 12)
+		return (0);
+	if (nb == 0)
+		return (1);
+	return (nb * (ft_recursive_factorial(nb - 1)));
 }
 /*
 int	main(void)
 {
-	int	a;
-	int	b;
-	int	div;
-	int	mod;
+	int	nb;
+	int	f;
 
-	a = 6;
-	b = 6;
-	div = 0;
-	mod = 0;
-	ft_div_mod(a, b, &div, &mod);
-	printf("%d", div);
+	nb = 5;
+	f = ft_recursive_factorial(nb);
+	printf("%d", f);
+	return (0);
 }*/
